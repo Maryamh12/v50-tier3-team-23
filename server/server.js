@@ -10,7 +10,7 @@ const Stripe = require("stripe");
 const app = express();
 require("dotenv").config();
 
-app.use(cors());
+app.use('*',cors());
 app.use(express.json());
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);

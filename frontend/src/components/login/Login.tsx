@@ -24,7 +24,7 @@ const Login = ({noteRegister, setNoteRegister,
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`http://localhost:5173/login`, formData);
+      const { data } = await axios.post(`https://resteraunt-app-server.onrender.com/login`, formData);
       console.log(data.token);
       console.log(data);
       localStorage.setItem("token", data.token);

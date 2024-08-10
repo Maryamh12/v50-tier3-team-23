@@ -12,7 +12,7 @@ export const ReturnPage = () => {
       const urlParams = new URLSearchParams(queryString);
       const sessionId = urlParams.get('session_id');
   
-      fetch(`http://localhost:8000/session-status?session_id=${sessionId}`)
+      fetch(`https://resteraunt-app-server.onrender.com/session-status?session_id=${sessionId}`)
         .then((res) => res.json())
         .then((data) => {
           setStatus(data.status);

@@ -26,7 +26,7 @@ const Register = ({noteRegister, setNoteRegister,
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-        const res = await axios.post(`http://localhost:5173/register`, formData);
+        const res = await axios.post(`https://resteraunt-app-server.onrender.com/register`, formData);
         console.log(formData);
         setNoteLogin(true);
         setNoteRegister(false);
